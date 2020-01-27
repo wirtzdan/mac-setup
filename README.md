@@ -30,3 +30,8 @@ This repository references my current mac setup. It's a mix of productivity, dev
 
 - [ ] Show file path
 - [ ] Show status bar
+
+## Iterm 2
+
+- [ ] Set to fullscreen overlay
+- [ ] Set OPTION + Space as shortcut
