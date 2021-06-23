@@ -1,0 +1,9 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "{cursor}\n----\n\n```\n@Date    : {datetime:short}\n@Author  : lmingzhi (lmingzhi@gmail.com)\n@Link    : lmingzhi.com\n@Version :\n```\n\n[TOC]\n\n----\n\n",
+    "dontautoexpand" : true,
+    "uid" : "0F085AC9-6DF3-48F7-B86A-E7EBB7437EFB",
+    "name" : "title",
+    "keyword" : "title"
+  }
+}

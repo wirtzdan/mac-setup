@@ -1,0 +1,9 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "chrome.runtime.onInstalled.addListener(function (details) {\n  if (details.reason === \"install\") {\n    \/\/ Code to be executed on first install\n    \/\/ eg. open a tab with a url\n    chrome.tabs.create({\n      url: \"https:\/\/google.com\"\n    });\n  } else if (details.reason === \"update\") {\n    \/\/ When extension is updated\n  } else if (details.reason === \"chrome_update\") {\n    \/\/ When browser is updated\n  } else if (details.reason === \"shared_module_update\") {\n    \/\/ When a shared module is updated\n  }\n});\n",
+    "dontautoexpand" : true,
+    "uid" : "43174915-6A40-48F6-8113-490D8076FFF5",
+    "name" : "onInstall Listener (Chrome Extension)",
+    "keyword" : ""
+  }
+}

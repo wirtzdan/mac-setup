@@ -1,0 +1,9 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "```{cursor}\n```",
+    "dontautoexpand" : true,
+    "uid" : "33C13E60-FC37-46AB-AB85-2FCF4024E4A2",
+    "name" : "code block",
+    "keyword" : "k"
+  }
+}

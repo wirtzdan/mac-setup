@@ -1,0 +1,61 @@
+{
+  "alfredtheme" : {
+    "result" : {
+      "textSpacing" : 8,
+      "subtext" : {
+        "size" : 12,
+        "colorSelected" : "#A7B5CFFF",
+        "font" : "System",
+        "color" : "#7C879BFF"
+      },
+      "shortcut" : {
+        "size" : 22,
+        "colorSelected" : "#00A9FFFF",
+        "font" : "System Light",
+        "color" : "#B2D7FFFF"
+      },
+      "backgroundSelected" : "#141A24FF",
+      "text" : {
+        "size" : 19,
+        "colorSelected" : "#00A9FFFF",
+        "font" : "System",
+        "color" : "#EAEFFBFF"
+      },
+      "iconPaddingHorizontal" : 11,
+      "paddingVertical" : 8,
+      "iconSize" : 42
+    },
+    "search" : {
+      "paddingVertical" : 0,
+      "background" : "#67676700",
+      "spacing" : 16,
+      "text" : {
+        "size" : 38,
+        "colorSelected" : "#000000FF",
+        "font" : "System Light",
+        "color" : "#EDE6EDFF"
+      },
+      "backgroundSelected" : "#B2D7FFFF"
+    },
+    "window" : {
+      "color" : "#000000FF",
+      "paddingHorizontal" : 18,
+      "width" : 611,
+      "borderPadding" : 0,
+      "borderColor" : "#000000FF",
+      "blur" : 40,
+      "roundness" : 10,
+      "paddingVertical" : 17
+    },
+    "credit" : "Clayton Chew",
+    "separator" : {
+      "color" : "#CBCBCBF3",
+      "thickness" : 0
+    },
+    "scrollbar" : {
+      "color" : "#00A9FFFF",
+      "thickness" : 6
+    },
+    "name" : "Midnight Blue"
+  }
+}

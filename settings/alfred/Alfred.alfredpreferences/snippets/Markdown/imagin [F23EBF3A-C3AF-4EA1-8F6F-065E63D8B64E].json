@@ -1,0 +1,9 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "![png]({cursor})",
+    "dontautoexpand" : true,
+    "uid" : "F23EBF3A-C3AF-4EA1-8F6F-065E63D8B64E",
+    "name" : "imagin",
+    "keyword" : "img"
+  }
+}

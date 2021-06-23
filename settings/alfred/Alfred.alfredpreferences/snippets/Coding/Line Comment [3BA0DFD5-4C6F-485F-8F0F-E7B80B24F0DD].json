@@ -1,0 +1,8 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "\/\/ ---- {cursor} ---- \/\/",
+    "uid" : "3BA0DFD5-4C6F-485F-8F0F-E7B80B24F0DD",
+    "name" : "Line Comment",
+    "keyword" : "lc"
+  }
+}

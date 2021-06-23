@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<workflow>
+  <name>Dark Sky Weather for Alfred</name>
+  <version>1.0.0</version>
+  <bundle>com.andrewbenson.darkskyalfred</bundle>
+  <updated>1537222875</updated>
+  <file>dark_sky.alfredworkflow</file>
+</workflow>

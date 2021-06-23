@@ -1,0 +1,8 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "Hey {clipboard:0}! \n\nThanks for the request. I see we have some overlapping topics.\n\nWhat is your current focus at {clipboard:1}?\n\nBest, \n\nDaniel",
+    "uid" : "91BFB514-9D1C-4B50-9639-EEA2EC9D8B96",
+    "name" : "Linkedin Connection Request",
+    "keyword" : "lc"
+  }
+}

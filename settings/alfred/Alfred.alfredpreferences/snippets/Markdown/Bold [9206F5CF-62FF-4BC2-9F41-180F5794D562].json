@@ -1,0 +1,9 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "**{cursor}**",
+    "dontautoexpand" : true,
+    "uid" : "9206F5CF-62FF-4BC2-9F41-180F5794D562",
+    "name" : "Bold",
+    "keyword" : "b"
+  }
+}

@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<workflow>
+  <name>Roam Page Search</name>
+  <version>5.2</version>
+  <bundle>com.jc.roampagesearch</bundle>
+  <updated>1600294954</updated>
+  <file>roam_page_search.alfredworkflow</file>
+</workflow>

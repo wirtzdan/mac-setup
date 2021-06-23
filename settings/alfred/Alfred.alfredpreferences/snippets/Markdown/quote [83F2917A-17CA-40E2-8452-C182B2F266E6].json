@@ -1,0 +1,9 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "> {cursor}quote\n> quote",
+    "dontautoexpand" : true,
+    "uid" : "83F2917A-17CA-40E2-8452-C182B2F266E6",
+    "name" : "quote",
+    "keyword" : "q"
+  }
+}

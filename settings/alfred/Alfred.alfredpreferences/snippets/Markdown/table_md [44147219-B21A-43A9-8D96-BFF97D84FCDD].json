@@ -1,0 +1,9 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "\n| Col1      |     Col2 |   Col3  |\n| :-------- | --------:| :------: |\n| field1    |   field2 |  field3  |\n| field1    |   field2 |  field3  |\n\n",
+    "dontautoexpand" : true,
+    "uid" : "44147219-B21A-43A9-8D96-BFF97D84FCDD",
+    "name" : "table_md",
+    "keyword" : "table"
+  }
+}

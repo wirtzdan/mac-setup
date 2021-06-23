@@ -1,0 +1,8 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "import React from \"react\";\nimport { Box } from \"@chakra-ui\/react\";\n\n\nconst Component = () => {\n  return (\n    <Box>\n       \n    <\/Box>\n  );\n};\n\nexport default Component;\n",
+    "uid" : "0EE5B2D0-84C5-479E-8DB2-0708D5DE4758",
+    "name" : "Function Compoent",
+    "keyword" : "fc"
+  }
+}

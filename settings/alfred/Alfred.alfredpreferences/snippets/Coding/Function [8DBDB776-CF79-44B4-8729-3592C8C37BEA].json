@@ -1,0 +1,8 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "const {cursor} = () => {\n    \n}",
+    "uid" : "8DBDB776-CF79-44B4-8729-3592C8C37BEA",
+    "name" : "Function",
+    "keyword" : "f"
+  }
+}

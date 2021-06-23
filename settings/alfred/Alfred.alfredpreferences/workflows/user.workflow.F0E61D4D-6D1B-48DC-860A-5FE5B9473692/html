@@ -1,0 +1,6 @@
+#!/usr/bin/ruby
+
+require 'open3'
+require_relative "#{Dir.pwd}/multimarkdown_bin_arch.rb"
+
+print Open3.capture2(ENV['multimarkdown_bin'], stdin_data: ARGV[0]).first

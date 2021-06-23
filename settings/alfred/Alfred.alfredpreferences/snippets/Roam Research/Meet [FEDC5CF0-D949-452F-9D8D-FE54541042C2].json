@@ -1,0 +1,9 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "- [[Meet]] with {cursor}\n    - Preperation::\n    - Notes::\n    - Summary::\n",
+    "dontautoexpand" : true,
+    "uid" : "FEDC5CF0-D949-452F-9D8D-FE54541042C2",
+    "name" : "Meet",
+    "keyword" : "meet"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "\"{clipboard:6}\",\n\"{clipboard:5}\",\n\"{clipboard:4}\",\n\"{clipboard:3}\",\n\"{clipboard:2}\",\n\"{clipboard:1}\",\n",
+    "dontautoexpand" : true,
+    "uid" : "1F20C400-9506-4261-AF8F-DBC086849331",
+    "name" : "Clipboard2Array",
+    "keyword" : ""
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "rm -rf .git",
+    "dontautoexpand" : true,
+    "uid" : "66F54F95-6328-49BF-8CB5-67A15F3F38A4",
+    "name" : "Delete Git",
+    "keyword" : ""
+  }
+}

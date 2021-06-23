@@ -1,0 +1,9 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "[[[[Book]]: {cursor}]]",
+    "dontautoexpand" : true,
+    "uid" : "2B55A18A-9315-485C-82B5-E296AD73954C",
+    "name" : "Book",
+    "keyword" : "book"
+  }
+}

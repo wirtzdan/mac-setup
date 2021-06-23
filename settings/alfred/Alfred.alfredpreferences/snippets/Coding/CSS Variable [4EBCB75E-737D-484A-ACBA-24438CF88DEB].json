@@ -1,0 +1,8 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "var(--{cursor})",
+    "uid" : "4EBCB75E-737D-484A-ACBA-24438CF88DEB",
+    "name" : "CSS Variable",
+    "keyword" : "v"
+  }
+}

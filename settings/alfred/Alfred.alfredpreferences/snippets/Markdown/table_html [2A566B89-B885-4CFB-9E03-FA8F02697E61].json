@@ -1,0 +1,9 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "\n<table class=\"table table-bordered table-striped table-condensed\">\n   <tr>\n      <th>时间<\/th>\n      <th>地点<\/th>\n      <th>人物<\/th>\n   <\/tr>\n   <tr>\n      <td>3月5日<\/td>\n      <td>北京<\/td>\n      <td>姚明<\/td>\n   <\/tr>\n   <tr>\n      <td>3月7日<\/td>\n      <td>上海<\/td>\n      <td>韩寒<\/td>\n   <\/tr>\n <\/table>\n\n",
+    "dontautoexpand" : true,
+    "uid" : "2A566B89-B885-4CFB-9E03-FA8F02697E61",
+    "name" : "table_html",
+    "keyword" : "htmltab"
+  }
+}

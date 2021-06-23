@@ -1,0 +1,9 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "- [[1:1]] with [[{cursor}]]\n    - Recap::\n    - Notes::\n    - Summary::\n",
+    "dontautoexpand" : true,
+    "uid" : "63CA4A6C-6219-47B4-B212-A871854BE737",
+    "name" : "1:1",
+    "keyword" : "11"
+  }
+}

@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>com.andrewbenson.darkskyalfred</string>
+	<key>connections</key>
+	<dict>
+		<key>4608CA92-3D1C-4C37-9678-07CFE42ACAD3</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>8BF8A26D-A4AE-41D1-8C5C-251CF7B1781F</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>973ED930-8057-41D5-9439-6C7E44093651</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>712CAAA6-2E35-47D9-AA47-01CDA93C2B21</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>C76BACC2-132B-467C-A184-D8146A6940B4</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>4608CA92-3D1C-4C37-9678-07CFE42ACAD3</string>
+				<key>modifiers</key>
+				<integer>1048576</integer>
+				<key>modifiersubtext</key>
+				<string>Weekly forecast view for '{query}'</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>F04114F7-0383-41A7-B1A4-60E3D3D240F5</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>E802B9E0-D5BB-4F59-8F44-A404BCF18CC0</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>973ED930-8057-41D5-9439-6C7E44093651</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>F04114F7-0383-41A7-B1A4-60E3D3D240F5</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>70677B89-6959-4AED-8B8C-30CA17A348AD</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Andrew Benson</string>
+	<key>description</key>
+	<string>Get weather on Dark Sky based on current location or a ZIP code.</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Dark Sky</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string>%20</string>
+				<key>url</key>
+				<string>https://darksky.net/forecast/{query}/us12/en</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>8BF8A26D-A4AE-41D1-8C5C-251CF7B1781F</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>weather</string>
+				<key>subtext</key>
+				<string>Get weather on Dark Sky for ZIP code '{query}'</string>
+				<key>text</key>
+				<string>Weather for ZIP Code</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>C76BACC2-132B-467C-A184-D8146A6940B4</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>script</key>
+				<string>import sys
+import csv
+
+def readcsv(filename):
+    ifile = open(filename, "rU")
+    reader = csv.reader(ifile, delimiter=",")
+
+    rownum = 0
+    a = []
+
+    for row in reader:
+        a.append (row)
+        rownum += 1
+
+    ifile.close()
+    return a
+
+def zip2ll(zipcode,filename):
+    thefile = readcsv(filename)
+    i=0
+    for row in thefile:
+        i=i+1
+        if zipcode == row[0]:
+            latitude = row[1]
+            longitude = row[2]
+            break
+
+    return [latitude, longitude]
+
+inzip = sys.argv[1]
+lloutput = zip2ll(inzip,"zips.csv")
+llstring = lloutput[0] + "," + lloutput[1]
+llstring = llstring.replace(" ","")
+sys.stdout.write(llstring)</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>3</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>4608CA92-3D1C-4C37-9678-07CFE42ACAD3</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>script</key>
+				<string>import sys
+import csv
+import datetime
+
+def readcsv(filename):
+    ifile = open(filename, "rU")
+    reader = csv.reader(ifile, delimiter=",")
+
+    rownum = 0
+    a = []
+
+    for row in reader:
+        a.append (row)
+        rownum += 1
+
+    ifile.close()
+    return a
+
+def zip2ll(zipcode,filename):
+    thefile = readcsv(filename)
+    i=0
+    for row in thefile:
+        i=i+1
+        if zipcode == row[0]:
+            latitude = row[1]
+            longitude = row[2]
+            break
+
+    return [latitude, longitude]
+
+inzip = sys.argv[1]
+lloutput = zip2ll(inzip,"zips.csv")
+
+mylist = []
+today = datetime.date.today()
+mylist.append(today)
+dateout = str(mylist[0])
+dateout = dateout.replace("-0","-")
+
+llstring = lloutput[0] + "," + lloutput[1] + "/" + dateout
+llstring = llstring.replace(" ","")
+
+sys.stdout.write(llstring)</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>3</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>F04114F7-0383-41A7-B1A4-60E3D3D240F5</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string>%20</string>
+				<key>url</key>
+				<string>https://darksky.net/details/{query}/us12/en</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>70677B89-6959-4AED-8B8C-30CA17A348AD</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string>%20</string>
+				<key>url</key>
+				<string>https://darksky.net/details/{query}/us12/en</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>712CAAA6-2E35-47D9-AA47-01CDA93C2B21</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>weather</string>
+				<key>subtext</key>
+				<string>Get weather on Dark Sky for current location</string>
+				<key>text</key>
+				<string>Weather for Current Location</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>E802B9E0-D5BB-4F59-8F44-A404BCF18CC0</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>script</key>
+				<string>import csv
+import sys
+import subprocess
+import datetime
+
+## Get location data from whereami script
+location = subprocess.check_output(['./whereami'])
+location = location.splitlines()
+
+## Extract latitude from location data
+latitude = str(location[0]).replace("Latitude: ","")
+latitude = latitude.replace("'","")
+
+## Extract longitude from location data
+longitude = str(location[1]).replace("Longitude: ","")
+longitude = longitude.replace("'","")
+
+## Combine latitude and longitude to create GPS string
+gpsstring = latitude + "," + longitude
+
+
+
+
+mylist = []
+today = datetime.date.today()
+mylist.append(today)
+dateout = str(mylist[0])
+dateout = dateout.replace("-0","-")
+
+sys.stdout.write(gpsstring + "/" + dateout)</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>./whereami</string>
+				<key>type</key>
+				<integer>3</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>973ED930-8057-41D5-9439-6C7E44093651</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string></string>
+	<key>uidata</key>
+	<dict>
+		<key>4608CA92-3D1C-4C37-9678-07CFE42ACAD3</key>
+		<dict>
+			<key>xpos</key>
+			<integer>280</integer>
+			<key>ypos</key>
+			<integer>50</integer>
+		</dict>
+		<key>70677B89-6959-4AED-8B8C-30CA17A348AD</key>
+		<dict>
+			<key>xpos</key>
+			<integer>490</integer>
+			<key>ypos</key>
+			<integer>230</integer>
+		</dict>
+		<key>712CAAA6-2E35-47D9-AA47-01CDA93C2B21</key>
+		<dict>
+			<key>xpos</key>
+			<integer>490</integer>
+			<key>ypos</key>
+			<integer>380</integer>
+		</dict>
+		<key>8BF8A26D-A4AE-41D1-8C5C-251CF7B1781F</key>
+		<dict>
+			<key>xpos</key>
+			<integer>490</integer>
+			<key>ypos</key>
+			<integer>50</integer>
+		</dict>
+		<key>973ED930-8057-41D5-9439-6C7E44093651</key>
+		<dict>
+			<key>xpos</key>
+			<integer>280</integer>
+			<key>ypos</key>
+			<integer>380</integer>
+		</dict>
+		<key>C76BACC2-132B-467C-A184-D8146A6940B4</key>
+		<dict>
+			<key>xpos</key>
+			<integer>80</integer>
+			<key>ypos</key>
+			<integer>50</integer>
+		</dict>
+		<key>E802B9E0-D5BB-4F59-8F44-A404BCF18CC0</key>
+		<dict>
+			<key>xpos</key>
+			<integer>80</integer>
+			<key>ypos</key>
+			<integer>380</integer>
+		</dict>
+		<key>F04114F7-0383-41A7-B1A4-60E3D3D240F5</key>
+		<dict>
+			<key>xpos</key>
+			<integer>280</integer>
+			<key>ypos</key>
+			<integer>230</integer>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string>https://andrewbenson.xyz</string>
+</dict>
+</plist>

@@ -1,0 +1,8 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "console.log(\"{clipboard}\", {clipboard})",
+    "uid" : "492824CE-4096-42C3-AF96-AD64A48B9FD9",
+    "name" : "Universal Console log",
+    "keyword" : "cl"
+  }
+}

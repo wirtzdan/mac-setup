@@ -1,0 +1,9 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "[Display_Text]({cursor})",
+    "dontautoexpand" : true,
+    "uid" : "697B4614-E49E-4DC7-94E7-BE951D205B33",
+    "name" : "link",
+    "keyword" : "link"
+  }
+}

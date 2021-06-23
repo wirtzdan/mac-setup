@@ -1,0 +1,9 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "[^Footnote]\n[^Footnote]:Footnote_Text",
+    "dontautoexpand" : true,
+    "uid" : "9360012E-A5AF-40C3-95EF-E3ED92FC9462",
+    "name" : "Footnote",
+    "keyword" : "fn"
+  }
+}

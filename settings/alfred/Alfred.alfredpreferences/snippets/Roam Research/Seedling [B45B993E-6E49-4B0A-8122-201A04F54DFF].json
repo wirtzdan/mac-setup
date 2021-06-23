@@ -1,0 +1,9 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "- #Seedling\n    - Note::\n        - {cursor}\n    - Tags::\n    - Source::\n    - References::\n",
+    "dontautoexpand" : true,
+    "uid" : "B45B993E-6E49-4B0A-8122-201A04F54DFF",
+    "name" : "Seedling",
+    "keyword" : "seed"
+  }
+}
